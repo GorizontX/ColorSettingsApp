@@ -34,16 +34,15 @@ class ViewController: UIViewController {
     @IBAction func redSliderAction() {
         let sliderValue = String(format: "%.2f", redSlider.value)
         redNuberLabel.text = String(sliderValue)
-        
+
         changeViewColor()
-        
     }
+    
     @IBAction func greenSliderAction() {
         let sliderValue = String(format: "%.2f", greenSlider.value)
         greenNumberLabel.text = String(sliderValue)
         
         changeViewColor()
-        
     }
     
     @IBAction func blueSliderAction() {
@@ -51,7 +50,6 @@ class ViewController: UIViewController {
         blueNumberLabel.text = String(sliderValue)
         
         changeViewColor()
-        
     }
     
     
