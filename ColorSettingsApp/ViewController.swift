@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     // MARK: - IB Outlets
     
     @IBOutlet var colorView: UIView!
-    @IBOutlet var numberOfRedLabel: UILabel!
-    @IBOutlet var numberOfGreenLabel: UILabel!
-    @IBOutlet var numberOfBlueLabel: UILabel!
+    @IBOutlet var redNuberLabel: UILabel!
+    @IBOutlet var greenNumberLabel: UILabel!
+    @IBOutlet var blueNumberLabel: UILabel!
     
     
     @IBOutlet var redSlider: UISlider!
@@ -32,15 +32,26 @@ class ViewController: UIViewController {
     // MARK: - IB Action
     
     @IBAction func redSliderAction() {
-       
+        let sliderValue = String(format: "%.2f", redSlider.value)
+        redNuberLabel.text = String(sliderValue)
+        
+        changeViewColor()
         
     }
     @IBAction func greenSliderAction() {
-        numberOfGreenLabel.text = "\(greenSlider.value)"
+        let sliderValue = String(format: "%.2f", greenSlider.value)
+        greenNumberLabel.text = String(sliderValue)
+        
+        changeViewColor()
+        
     }
     
     @IBAction func blueSliderAction() {
-        numberOfBlueLabel.text = "\(blueSlider.value)"
+        let sliderValue = String(format: "%.2f", blueSlider.value)
+        blueNumberLabel.text = String(sliderValue)
+        
+        changeViewColor()
+        
     }
     
     
@@ -59,6 +70,17 @@ class ViewController: UIViewController {
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
     }
+    
+    private func changeViewColor() {
+        
+        colorView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: CGFloat(1)
+        )
+    }
+    
     
 }
 

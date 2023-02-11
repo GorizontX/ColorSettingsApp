@@ -124,12 +124,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueNumberLabel" destination="of6-or-FsS" id="M9c-N9-ide"/>
                         <outlet property="blueSlider" destination="Bs9-d4-fRh" id="dRV-5b-Lgh"/>
                         <outlet property="colorView" destination="Tf8-my-GY6" id="3so-gd-T8D"/>
+                        <outlet property="greenNumberLabel" destination="rVD-Du-2vL" id="eYV-8h-wTf"/>
                         <outlet property="greenSlider" destination="qyu-Pk-fgK" id="z2G-HX-IuU"/>
-                        <outlet property="numberOfBlueLabel" destination="of6-or-FsS" id="M9c-N9-ide"/>
-                        <outlet property="numberOfGreenLabel" destination="rVD-Du-2vL" id="eYV-8h-wTf"/>
-                        <outlet property="numberOfRedLabel" destination="UdE-z8-0Lg" id="Lop-gl-g9k"/>
+                        <outlet property="redNuberLabel" destination="UdE-z8-0Lg" id="Lop-gl-g9k"/>
                         <outlet property="redSlider" destination="wW5-hs-65t" id="Hf9-mh-Rd4"/>
                     </connections>
                 </viewController>
