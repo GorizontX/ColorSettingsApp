@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		5715D8DD2996B26900D414E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5715D8DC2996B26900D414E0 /* AppDelegate.swift */; };
 		5715D8DF2996B26900D414E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5715D8DE2996B26900D414E0 /* SceneDelegate.swift */; };
-		5715D8E12996B26900D414E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5715D8E02996B26900D414E0 /* ViewController.swift */; };
+		5715D8E12996B26900D414E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5715D8E02996B26900D414E0 /* SettingsViewController.swift */; };
 		5715D8E42996B26900D414E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5715D8E22996B26900D414E0 /* Main.storyboard */; };
 		5715D8E62996B26A00D414E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5715D8E52996B26A00D414E0 /* Assets.xcassets */; };
 		5715D8E92996B26A00D414E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5715D8E72996B26A00D414E0 /* LaunchScreen.storyboard */; };
+		57952DC829DC6F7900CA43AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57952DC729DC6F7900CA43AB /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5715D8D92996B26900D414E0 /* ColorSettingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSettingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5715D8DC2996B26900D414E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5715D8DE2996B26900D414E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5715D8E02996B26900D414E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5715D8E02996B26900D414E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5715D8E32996B26900D414E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5715D8E52996B26A00D414E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5715D8E82996B26A00D414E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5715D8EA2996B26A00D414E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57952DC729DC6F7900CA43AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				5715D8DC2996B26900D414E0 /* AppDelegate.swift */,
 				5715D8DE2996B26900D414E0 /* SceneDelegate.swift */,
-				5715D8E02996B26900D414E0 /* ViewController.swift */,
+				57952DC729DC6F7900CA43AB /* MainViewController.swift */,
+				5715D8E02996B26900D414E0 /* SettingsViewController.swift */,
 				5715D8E22996B26900D414E0 /* Main.storyboard */,
 				5715D8E52996B26A00D414E0 /* Assets.xcassets */,
 				5715D8E72996B26A00D414E0 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5715D8E12996B26900D414E0 /* ViewController.swift in Sources */,
+				5715D8E12996B26900D414E0 /* SettingsViewController.swift in Sources */,
 				5715D8DD2996B26900D414E0 /* AppDelegate.swift in Sources */,
 				5715D8DF2996B26900D414E0 /* SceneDelegate.swift in Sources */,
+				57952DC829DC6F7900CA43AB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GK8CJZB3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorSettingsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GK8CJZB3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ColorSettingsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     // MARK: - IB Outlets
     
@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet var redNuberLabel: UILabel!
     @IBOutlet var greenNumberLabel: UILabel!
     @IBOutlet var blueNumberLabel: UILabel!
-    
     
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
@@ -26,6 +25,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .black
         colorView.layer.cornerRadius = 10
         setUpSlider()
+        changeViewColor()
         
     }
     
@@ -55,14 +55,6 @@ class ViewController: UIViewController {
     
     // MARK: - Privat Methods
     private func setUpSlider() {
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 1
-        
-        greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 1
-        
-        blueSlider.minimumValue = 0
-        blueSlider.maximumValue = 1
         
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
@@ -75,7 +67,7 @@ class ViewController: UIViewController {
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
-            alpha: CGFloat(1)
+            alpha: 1
         )
     }
     
