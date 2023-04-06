@@ -110,19 +110,19 @@
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wW5-hs-65t">
                                                         <rect key="frame" x="-2" y="0.0" width="281.33333333333331" height="31"/>
                                                         <connections>
-                                                            <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Dc5-SO-weE"/>
+                                                            <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="lxZ-1p-hpB"/>
                                                         </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-Pk-fgK">
                                                         <rect key="frame" x="-2" y="35" width="281.33333333333331" height="31"/>
                                                         <connections>
-                                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="cYf-Xm-RI6"/>
+                                                            <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fn3-BD-3zz"/>
                                                         </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Bs9-d4-fRh">
                                                         <rect key="frame" x="-2" y="70" width="281.33333333333331" height="31"/>
                                                         <connections>
-                                                            <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="K7R-3S-wT6"/>
+                                                            <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="HaK-z9-hcZ"/>
                                                         </connections>
                                                     </slider>
                                                 </subviews>
@@ -131,33 +131,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-Dk-IHa">
-                                <rect key="frame" x="154" y="726.66666666666663" width="85" height="34.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="DGI-oL-kp5"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiN-Cf-xul">
+                                <rect key="frame" x="151" y="734" width="90" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="iT9-A7-K4Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="VM8-3k-xb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="42a-Ov-hxO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GT1-Dk-IHa" secondAttribute="trailing" constant="154" id="M15-wA-kfr"/>
-                            <constraint firstItem="GT1-Dk-IHa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="Os3-uF-tGe"/>
                             <constraint firstItem="VM8-3k-xb6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="TKZ-9H-wwM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VM8-3k-xb6" secondAttribute="trailing" constant="16" id="cWb-Bo-ZmB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GT1-Dk-IHa" secondAttribute="bottom" constant="91" id="xyI-gD-RQz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueNumberLabel" destination="of6-or-FsS" id="M9c-N9-ide"/>
+                        <outlet property="blueLabel" destination="of6-or-FsS" id="M9c-N9-ide"/>
                         <outlet property="blueSlider" destination="Bs9-d4-fRh" id="dRV-5b-Lgh"/>
                         <outlet property="colorView" destination="Tf8-my-GY6" id="3so-gd-T8D"/>
-                        <outlet property="greenNumberLabel" destination="rVD-Du-2vL" id="eYV-8h-wTf"/>
+                        <outlet property="greenLabel" destination="rVD-Du-2vL" id="eYV-8h-wTf"/>
                         <outlet property="greenSlider" destination="qyu-Pk-fgK" id="z2G-HX-IuU"/>
-                        <outlet property="redNuberLabel" destination="UdE-z8-0Lg" id="Lop-gl-g9k"/>
+                        <outlet property="redLabel" destination="UdE-z8-0Lg" id="Lop-gl-g9k"/>
                         <outlet property="redSlider" destination="wW5-hs-65t" id="Hf9-mh-Rd4"/>
                     </connections>
                 </viewController>
