@@ -20,34 +20,49 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
+    
     var delegate: SettingsViewControllersDelegte!
-    var setSolor: UIColor!
+    var viewColor: UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         colorView.layer.cornerRadius = 15
         
+        redSlider.tintColor = .red
+        greenSlider.tintColor = .green
+        
+        colorView.backgroundColor = viewColor
+        
         setColor()
+        setValue(for: redSlider, greenSlider, blueSlider)
         setValue(for: redLabel, greenLabel, blueLabel)
+        setValue(for: redTextField, greenTextField, blueTextField)
     }
     
+    //позволяет убирать клавиатуру при нажатии на экран, при этом завершается редактиврование текста
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
     // MARK: - IB Action
-    
     @IBAction func rgbSliderAction(_ sender: UISlider) {
-        setColor()
         switch sender {
         case redSlider:
-            redLabel.text = string(from: redSlider)
+        setValue(for: redLabel)
         case greenSlider:
-            greenLabel.text = string(from: greenSlider)
+            setValue(for: greenLabel)
         default:
-            blueLabel.text = string(from: blueSlider)
+            setValue(for: blueLabel)
         }
+        
+        setColor()
     }
     
     @IBAction func saveButtonPressed() {
@@ -79,9 +94,38 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    private func setValue(for textField: UITextField...) {
+        textField.forEach { textField in
+            switch textField {
+            case redTextField:
+                redTextField.text = string(from: redSlider)
+            case greenTextField:
+                greenTextField.text = string(from: redSlider)
+            default: blueTextField.text = string(from: blueSlider)
+            }
+        }
+    }
+    
+    private func setValue(for colorSliders: UISlider...) {
+        let ciColor = CIColor(color: viewColor)
+        colorSliders.forEach { slider in
+            switch slider {
+            case redSlider: redSlider.value = Float(ciColor.red)
+            case greenSlider: greenSlider.value = Float(ciColor.green)
+            default: blueSlider.value = Float(ciColor.blue)
+            }
+        }
+    }
+    
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
+    
+    @objc private func didTapDone() {
+        view.endEditing(true)
+    }
+    
+    
     
 }
 

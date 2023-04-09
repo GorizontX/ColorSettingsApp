@@ -15,9 +15,8 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? SettingsViewController else { return }
         settingsVC.delegate = self
-        settingsVC.setSolor = view.backgroundColor
+        settingsVC.viewColor = view.backgroundColor
     }
-    
 }
 
 // MARK: - ColorDelegate
@@ -25,6 +24,4 @@ extension MainViewController: SettingsViewControllersDelegte {
     func setColor(_ color: UIColor) {
         view.backgroundColor = color
     }
-    
-    
 }
